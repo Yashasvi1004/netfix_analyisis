@@ -91,11 +91,19 @@ These visualizations help interpret customer behavior and restaurant performance
 
 # Key Insights
 
-* **Dining restaurants** are the most common type of restaurant.
-* Most restaurant ratings fall between **3.5 and 4**.
-* Couples tend to prefer restaurants with an average cost around **₹300**.
-* **Online orders generally receive higher ratings** compared to offline orders.
-* Dining restaurants receive more **offline orders**, while **cafes get more online orders**.
+
+* **Dining restaurants are the most common type of restaurants** in the dataset, indicating that customers frequently prefer dining-style establishments.
+
+* **Dining restaurants also receive the highest number of votes**, suggesting they are the most popular among customers.
+
+* **Most restaurant ratings fall between 3.5 and 4.0**, which indicates that the majority of restaurants have moderately good ratings.
+
+* **Restaurants offering online ordering tend to have a higher average cost (~₹510 for two people)** compared to restaurants without online ordering (~₹359).
+
+* **Online orders generally receive higher ratings compared to offline orders**, indicating better customer satisfaction for online ordering services.
+
+* **Dining restaurants receive more offline orders, while cafes receive relatively more online orders**, suggesting different customer behavior depending on restaurant type.
+
 
 These insights are derived from the visual analysis performed in the notebook. 
 

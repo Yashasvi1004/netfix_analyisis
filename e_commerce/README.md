@@ -110,6 +110,7 @@ Each analysis is backed by charts for clear interpretation:
 
 ├── e_commerce_project_code.ipynb   # Main analysis notebook
 ├── e_commerce_project_dataset.csv  # Raw dataset
+├── e_commerce_project_code.pdf     # Code file in pdf form
 └── README.md
 ```
 

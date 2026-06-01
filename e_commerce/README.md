@@ -27,7 +27,7 @@ An exploratory data analysis (EDA) project on a US-based e-commerce store's tran
 
 ## 🛠️ Tech Stack
 
-- **Python 3.x**
+- **Python**
 - **Pandas** — data manipulation and aggregation
 - **NumPy** — numerical operations
 - **Matplotlib** — static charts
@@ -35,7 +35,13 @@ An exploratory data analysis (EDA) project on a US-based e-commerce store's tran
 - **Datetime** — date parsing and feature engineering
 
 ---
+## 🔧 Preprocessing
 
+* Parsed `Order Date` & `Ship Date` to `datetime`
+* Confirmed zero nulls and zero duplicates
+* Extracted `Order Year`, `Order Month`, `Order Day of Week`
+
+---
 ## 📊 Analyses Performed
 
 ### 1. Monthly Sales Analysis
@@ -81,19 +87,27 @@ An exploratory data analysis (EDA) project on a US-based e-commerce store's tran
 | Discounts > 20% = losses | Average profit flips negative at medium–high discount bands |
 | Furniture margin: only 2.49% | Technology and Office Supplies earn 17%+ margins |
 | Tables & Bookcases are loss-making | Negative profit margin sub-categories despite decent sales |
-| Texas lost ₹25,729 despite high sales | Deep discounting in certain states is eroding profitability |
 
 ### Business Recommendations
 - **Cap discounts at 20%** across all categories; eliminate deep discounts (40%+) entirely
 - **Review Furniture pricing**, especially Tables and Bookcases — every sale loses money
 - **Focus marketing on the Consumer segment** — highest ROI per sales dollar
-- **Audit discount practices in the Central region** (Texas, Illinois, Ohio) to recover lost profit
 
 ---
+## 📉 Visualisations
 
+Each analysis is backed by charts for clear interpretation:
+
+- **Bar charts** — monthly sales & profit, category/sub-category comparisons, top 10 states by profit
+- **Line plots** — sales and profit trends across months (with dot markers for profit trend)
+- **Pie / Donut charts** — proportional share of sales, profit, and sales-to-profit ratio by category and segment
+- **Grouped bar chart** — side-by-side sales and profit comparison across customer segments
+- **Regression plot** — scatter plot with fitted regression line showing the negative relationship between discount rate and profit
+---
 ## 🗂️ Project Structure
 
 ```
+
 ├── e_commerce_project_code.ipynb   # Main analysis notebook
 ├── e_commerce_project_dataset.csv  # Raw dataset
 └── README.md
@@ -101,30 +115,3 @@ An exploratory data analysis (EDA) project on a US-based e-commerce store's tran
 
 ---
 
-## ▶️ How to Run
-
-1. Clone the repository
-   ```bash
-   git clone https://github.com/your-username/ecommerce-analysis.git
-   cd ecommerce-analysis
-   ```
-
-2. Install dependencies
-   ```bash
-   pip install pandas numpy matplotlib seaborn
-   ```
-
-3. Open the notebook
-   ```bash
-   jupyter notebook e_commerce_project_code.ipynb
-   ```
-
-4. Run all cells top to bottom — ensure the CSV is in the same directory as the notebook
-
----
-
-## 📌 Notes
-
-- The dataset uses `latin-1` encoding — handled in the `pd.read_csv()` call
-- Date columns (`Order Date`, `Ship Date`) are parsed to `datetime` during preprocessing
-- Derived columns added during analysis: `Order Year`, `Order Month`, `Order Day of Week`, `Profit Margin`, `Discount Bucket`
